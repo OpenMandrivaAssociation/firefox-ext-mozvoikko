@@ -19,7 +19,7 @@ BuildRequires:	voikko-devel
 BuildRequires:	%{_lib}firefox-devel >= 3
 # No automatic dependency on libvoikko.so.1 because it is dlopened:
 Requires:	%{_lib}voikko1 >= 1.7
-Requires:	firefox >= 3
+Requires:	firefox = %{firefox_ver}
 Requires:	voikko-fi
 Requires:	locales-fi
 
