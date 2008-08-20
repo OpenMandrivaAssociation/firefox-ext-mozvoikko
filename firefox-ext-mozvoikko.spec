@@ -15,6 +15,7 @@ License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
 Source:		%oname-%version.tar.gz
+Patch0:		mozvoikko-0.9.5-add-inc.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel
@@ -31,13 +32,12 @@ spell-checking is provided by the Voikko library.
 
 %prep
 %setup -q -n %oname-%version
+%patch0 -p0
 
 %build
 
 %make -f Makefile.xulrunner extension-files \
-	CFLAGS="%optflags" \
-	XULRUNNER_SDK="`pkg-config libxul --variable=sdkdir`" \
-	NSPR_INCLUDES="-I`pkg-config nspr --variable=includedir`"
+	CFLAGS="%optflags"
 
 %install
 rm -rf %{buildroot}
