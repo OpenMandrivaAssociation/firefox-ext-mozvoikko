@@ -18,6 +18,7 @@ Source:		http://downloads.sourceforge.net/voikko/%oname-%version.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel-unstable
+BuildRequires:	firefox
 # No automatic dependency on libvoikko.so.1 because it is dlopened:
 Requires:	%{_lib}voikko1 >= 1.7
 Requires:	firefox = %{firefox_epoch}:%{firefox_ver}
