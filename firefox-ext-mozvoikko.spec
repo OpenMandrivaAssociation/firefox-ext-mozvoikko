@@ -1,8 +1,8 @@
 
 %define oname	mozvoikko
 %define name	firefox-ext-mozvoikko
-%define version	0.9.5
-%define rel	7
+%define version	0.9.6
+%define rel	1
 
 %define firefox_ver %(rpm -q --whatprovides mozilla-firefox --queryformat %{VERSION})
 %define firefox_epoch %(rpm -q --whatprovides mozilla-firefox --queryformat %{EPOCH})
@@ -14,8 +14,7 @@ Release:	%mkrel %rel
 License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
-Source:		%oname-%version.tar.gz
-Patch0:		mozvoikko-0.9.5-add-inc.patch
+Source:		http://downloads.sourceforge.net/voikko/%oname-%version.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel
@@ -32,7 +31,6 @@ spell-checking is provided by the Voikko library.
 
 %prep
 %setup -q -n %oname-%version
-%patch0 -p0
 
 %build
 
