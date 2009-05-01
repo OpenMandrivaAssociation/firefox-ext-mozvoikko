@@ -1,8 +1,8 @@
 
 %define oname	mozvoikko
 %define name	firefox-ext-mozvoikko
-%define version	0.9.6
-%define rel	2
+%define version	1.0
+%define rel	1
 
 %define firefox_ver %(rpm -q --whatprovides mozilla-firefox --queryformat %{VERSION})
 %define firefox_epoch %(rpm -q --whatprovides mozilla-firefox --queryformat %{EPOCH})
