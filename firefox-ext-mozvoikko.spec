@@ -2,10 +2,7 @@
 %define oname	mozvoikko
 %define name	firefox-ext-mozvoikko
 %define version	1.0
-%define rel	4
-
-%define firefox_ver %(rpm -q --whatprovides mozilla-firefox --queryformat %{VERSION})
-%define firefox_epoch %(rpm -q --whatprovides mozilla-firefox --queryformat %{EPOCH})
+%define rel	5
 
 Summary:	Finnish spell-checking extension for Firefox 3
 Name:		%name
@@ -21,7 +18,7 @@ BuildRequires:	xulrunner-devel-unstable
 BuildRequires:	firefox
 # No automatic dependency on libvoikko.so.1 because it is dlopened:
 Requires:	%{_lib}voikko1 >= 1.7
-Requires:	firefox = %{firefox_epoch}:%{firefox_ver}
+Requires:	firefox = %{firefox_epoch}:%{firefox_version}
 Requires:	voikko-fi
 Requires:	locales-fi
 
@@ -41,7 +38,7 @@ spell-checking is provided by the Voikko library.
 rm -rf %{buildroot}
 
 %make -f Makefile.xulrunner install-unpacked \
-	DESTDIR=%{buildroot}%{_libdir}/firefox-%{firefox_ver}/extensions
+	DESTDIR=%{buildroot}%{firefox_mozillapath}/extensions
 
 %clean
 rm -rf %{buildroot}
@@ -49,5 +46,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc ChangeLog
-%{_libdir}/firefox-%{firefox_ver}/extensions/{*-*}
+%{firefox_mozillapath}/extensions/{*-*}
 
