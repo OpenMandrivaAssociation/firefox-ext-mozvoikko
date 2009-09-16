@@ -2,7 +2,7 @@
 %define oname	mozvoikko
 %define name	firefox-ext-mozvoikko
 %define version	1.0
-%define rel	5
+%define rel	6
 
 Summary:	Finnish spell-checking extension for Firefox 3
 Name:		%name
