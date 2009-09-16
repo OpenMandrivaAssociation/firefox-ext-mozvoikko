@@ -1,4 +1,3 @@
-
 %define oname	mozvoikko
 %define name	firefox-ext-mozvoikko
 %define version	1.0
@@ -15,7 +14,7 @@ Source:		http://downloads.sourceforge.net/voikko/%oname-%version.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel
-BuildRequires:	firefox
+BuildRequires:	firefox-devel
 # No automatic dependency on libvoikko.so.1 because it is dlopened:
 Requires:	%{_lib}voikko1 >= 1.7
 Requires:	firefox = %{firefox_epoch}:%{firefox_version}
