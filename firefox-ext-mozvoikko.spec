@@ -11,6 +11,7 @@ License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
 Source:		http://downloads.sourceforge.net/voikko/%oname-%version.tar.gz
+Patch0:		mozvoikko-1.0-xulrunner-1.9.2.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel
@@ -27,6 +28,7 @@ spell-checking is provided by the Voikko library.
 
 %prep
 %setup -q -n %oname-%version
+%patch0 -p0
 
 %build
 
