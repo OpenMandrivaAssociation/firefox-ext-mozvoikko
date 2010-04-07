@@ -1,12 +1,12 @@
+%define _enable_debug_packages %{nil}
+%define debug_package          %{nil}
+
 %define oname	mozvoikko
-%define name	firefox-ext-mozvoikko
-%define version	1.0
-%define rel	11
 
 Summary:	Finnish spell-checking extension for Firefox 3
-Name:		%name
-Version:	%version
-Release:	%mkrel %rel
+Name:		firefox-ext-mozvoikko
+Version:	1.0
+Release:	%mkrel 12
 License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
