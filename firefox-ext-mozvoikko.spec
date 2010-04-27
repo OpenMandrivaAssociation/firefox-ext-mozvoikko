@@ -3,7 +3,7 @@
 Summary:	Finnish spell-checking extension for Firefox 3
 Name:		firefox-ext-mozvoikko
 Version:	1.0
-Release:	%mkrel 13
+Release:	%mkrel 14
 License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
