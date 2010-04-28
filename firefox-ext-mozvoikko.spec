@@ -2,13 +2,12 @@
 
 Summary:	Finnish spell-checking extension for Firefox 3
 Name:		firefox-ext-mozvoikko
-Version:	1.0
-Release:	%mkrel 15
+Version:	1.0.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
 Source:		http://downloads.sourceforge.net/voikko/%oname-%version.tar.gz
-Patch0:		mozvoikko-1.0-xulrunner-1.9.2.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel
@@ -25,12 +24,14 @@ spell-checking is provided by the Voikko library.
 
 %prep
 %setup -q -n %oname-%version
-%patch0 -p0
 
 %build
 
 %make -f Makefile.xulrunner extension-files \
-	CFLAGS="%optflags"
+	CFLAGS="%optflags" \
+	XULRUNNER_INCLUDES="$(pkg-config --cflags libxul)" \
+	XULRUNNER_LIBS="$(pkg-config --libs libxul)"
+	
 
 %install
 rm -rf %{buildroot}
