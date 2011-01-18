@@ -1,9 +1,9 @@
 %define oname	mozvoikko
 
-Summary:	Finnish spell-checking extension for Firefox 3
+Summary:	Finnish spell-checking extension for Firefox
 Name:		firefox-ext-mozvoikko
 Version:	1.9.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://voikko.sourceforge.net/
