@@ -1,0 +1,24 @@
+A patch for:
+
+# HG changeset patch
+# User Kyle Huey <khuey@kylehuey.com>
+# Date 1297987780 18000
+# Node ID f99b6caaaff9afe4a4b2f9d7106586125f00690b
+# Parent  14033ede4ba6498d10223fb88605324eb1848b5d
+Bug 629734: Integrate hunspell test suite as an xpcshell test. r=ehsan
+
+
+diff -up mozvoikko/src/mozVoikkoSpell.cpp.old mozvoikko/src/mozVoikkoSpell.cpp
+--- mozvoikko/src/mozVoikkoSpell.cpp.old	2010-11-22 21:45:39.000000000 +0100
++++ mozvoikko/src/mozVoikkoSpell.cpp	2011-06-22 17:48:54.360684336 +0200
+@@ -293,3 +293,10 @@ NS_IMETHODIMP mozVoikkoSpell::Suggest(co
+ 
+     return rv;
+ }
++
++/* void loadDictionariesFromDir (in nsIFile dir); */
++NS_IMETHODIMP mozVoikkoSpell::LoadDictionariesFromDir(nsIFile *dir)
++{
++    return NS_ERROR_NOT_IMPLEMENTED;
++}
++
