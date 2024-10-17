@@ -6,7 +6,7 @@ Version:	1.9.0
 Release:	%mkrel 7
 License:	GPLv2+
 Group:		Networking/WWW
-URL:		http://voikko.sourceforge.net/
+URL:		https://voikko.sourceforge.net/
 Source:		http://ap1.pp.fi/mozilla/mozvoikko/%version/%oname-%version.tar.bz2
 # Patch to build against newest xulrunner
 Patch0:         mozvoikko-dict.patch
