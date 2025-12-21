@@ -11,6 +11,7 @@ Source:		http://ap1.pp.fi/mozilla/mozvoikko/%version/%oname-%version.tar.bz2
 # Patch to build against newest xulrunner
 Patch0:         mozvoikko-dict.patch
 BuildRoot:	%{_tmppath}/%{name}-root
+BuildRequires:	make
 BuildRequires:	voikko-devel
 BuildRequires:	xulrunner-devel
 BuildRequires:	firefox-devel
